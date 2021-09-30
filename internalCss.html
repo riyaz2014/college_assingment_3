@@ -5,7 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+/* universal selector  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* class selector  */
+
+/* grouping selector */
+h1 , h2 , h3{
+    color: blue;
+}
+
+.container{
+    width: 70%;
+    max-width: 840px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: #eaf7ee;
+    padding: 2rem;
+    border-radius: 3rem;
+}
+
+
+/* id selector  */
+#intro{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 2rem;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+#photo{
+    margin-right: 2rem;
+}
+
+/* element selector  */
+img{
+    border-radius: 50%;
+}
+
+/* seudo selector  */
+img:hover{
+    border: 5px solid black;
+}
+
+
+/* type selector */
+source[type="audio/mpeg"]{
+    display: inline-block;
+    width: 100%;
+}
+
+.video{
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+
+#videoContainer{
+    padding: 2rm;
+    border-radius: 5px solid #86aac4;
+}
+
+/* child selector */
+div > p{
+    color:rgb(248, 129, 86)
+}
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -35,9 +111,6 @@
             <p>Mongo DB</p>
             <p>Problem Solving</p>
         </div>
-    
-      
-    
         <div>
             <h2>introduction audio</h2>
             <audio  controls loop >
@@ -52,7 +125,7 @@
                 <source src="./media/shuttle.mp4" >
             </video>
         </div>
-        <a href="./internalCss.html">to see the internal css </a>
+
     </div>
 </body>
 </html>
