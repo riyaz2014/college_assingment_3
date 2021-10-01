@@ -4,128 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Css selectors</title>
     <style>
-        
-/* universal selector  */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* class selector  */
+       /* universal selector*/
+        *{
+            box-sizing: border-box;
+        }
 
-/* grouping selector */
-h1 , h2 , h3{
-    color: blue;
-}
+        /*class selctor*/ 
+        .container{
+            width: 65%;
+            max-width: 720px;
+            margin: 2rem auto ;
+            background-color: rgb(245, 237, 237);
+            padding: 1.5rem;
+        }
 
-.container{
-    width: 70%;
-    max-width: 840px;
-    margin: 3rem auto;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    background-color: #eaf7ee;
-    padding: 2rem;
-    border-radius: 3rem;
-}
+        /*id selctor*/ 
+        #idSelector{
+            color:blue;
+            font-size: 1.5rem;
+        }
 
+       /* element selctor*/
+       img{
+           width: 100%;
+            border-radius: 50%;
+       }
 
-/* id selector  */
-#intro{
-    display: flex;
-    justify-content:space-around;
-    margin-top: 2rem;
-    width: 90%;
-    margin: auto;
-    flex-wrap: wrap;
-}
+       /*type selector*/
+       div[class="photo"]{
+           width: 40%;
+       }
 
-#photo{
-    margin-right: 2rem;
-}
+       /*seudo elecment selector*/
+       img:hover{
+        border: 5px solid rgb(228, 133, 149);
+       }
 
-/* element selector  */
-img{
-    border-radius: 50%;
-}
+      /* grouping selector */
+      h1 , h2 , h3 {
+          color: rgb(247, 49, 99);
+      }
 
-/* seudo selector  */
-img:hover{
-    border: 5px solid black;
-}
-
-
-/* type selector */
-source[type="audio/mpeg"]{
-    display: inline-block;
-    width: 100%;
-}
-
-.video{
-    width: 100%;
-    height: auto;
-    margin-top: 2rem;
-}
-
-
-#videoContainer{
-    padding: 2rm;
-    border-radius: 5px solid #86aac4;
-}
-
-/* child selector */
-div > p{
-    color:rgb(248, 129, 86)
-}
-
+      /*child selector*/
+      #courses>p{
+        color: green;
+      }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>MY PROFILE</h1>    
-        <div id="intro" >
-            <div id="photo">
-                <img src="./media/profile_photo.png" alt="">
-            </div>
-            <div>
-                <h2>Education Details</h2>
-                <h4>name : Riyaz Ahmad</h4>
-                <h4>college : vivekanannd Education society institute of Technology</h4>
-                <h4>Branch : information Technology</h4>
-            </div>
-        </div>
-    
-        <div >
-            <h2 >Skill set</h2>
-            <p>java</p>
-            <p>Python</p>
-            <p>C language</p>
-            <p>html</p>
-            <p>CSS</p>
-            <p>Javascript</p>
-            <p>node JS</p>
-            <p>Express Js</p>
-            <p>Mongo DB</p>
-            <p>Problem Solving</p>
-        </div>
+        <h1>CSS Selector</h1>
         <div>
-            <h2>introduction audio</h2>
-            <audio  controls loop >
-                <source src="./media/piano.mp3" type="audio/mpeg">
-                your browser does not support 
-            </audio>
+            <p id="idSelector">Id selector</p>
         </div>
-    
-    
-        <div id="videoContainer">
-            <video controls class="video">
-                <source src="./media/shuttle.mp4" >
-            </video>
+        <div class="photo">
+            <img src="./media/profile_photo.png" alt="">
         </div>
 
+        <div id="courses">
+            <p>HTML</p>
+            <p>CSS</p>
+            <P>java Script</P>
+            <p>node JS</p>
+            <p>Express</p>
+            <p>mongodb</p>
+        </div>
     </div>
 </body>
 </html>
